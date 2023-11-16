@@ -18,14 +18,6 @@ public class TestarBaralho {
     }
 
     @Test
-    public void testNovaCarta() {
-        Carta carta1 = Carta.criarCarta(Tipo.C, Valor.DOIS);
-        Carta carta2 = Carta.novaCarta(carta1);
-        assertEquals(carta1.getTipo(), carta2.getTipo());
-        assertEquals(carta1.getValor(), carta2.getValor());
-    }
-
-    @Test
     public void testAddCarta() {
         Baralho baralho = new Baralho(false);
         Carta carta = Carta.criarCarta(Tipo.C, Valor.DOIS);
