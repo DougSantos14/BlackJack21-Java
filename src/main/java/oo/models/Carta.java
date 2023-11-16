@@ -18,13 +18,7 @@ public class Carta {
     // factory method
     public static Carta criarCarta(Tipo tipo, Valor valor) {
         return new Carta(tipo, valor);
-    }
-
-    // factory method
-    public static Carta novaCarta(Carta carta) {
-        return new Carta(carta);
-
-    }
+    } 
 
     public Tipo getTipo() {
         return tipo;

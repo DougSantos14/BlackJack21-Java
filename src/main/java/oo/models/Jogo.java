@@ -23,10 +23,10 @@ public class Jogo {
         empates = 0;
         baralho.Embaralhar();
 
-        System.out.println("........................................");
-        System.out.println("|     Bem vindos ao BlackJack(21)      |");
-        System.out.println("| Jogador(a) Nº1, digite seu nickname: |");
-        System.out.println("|......................................|\n");
+        System.out.println("...............................................");
+        System.out.println("|     Bem vindos ao BlackJack(21)             |");
+        System.out.println("| Jogador(a) Nº1, digite seu nickname abaixo: |");
+        System.out.println("|.............................................|\n");
         String nomeJogador1 = scan.nextLine();
         while (nomeJogador1.trim().isEmpty()) {
             System.out.println("Nome em branco. Digite algo: \n");
@@ -34,10 +34,10 @@ public class Jogo {
         }
         jogador1 = new Jogador(nomeJogador1);
 
-        System.out.println("........................................");
-        System.out.println("|                                      |");
-        System.out.println("| Jogador(a) Nº2, digite seu nickname: |");
-        System.out.println("|......................................|\n");
+        System.out.println("...............................................");
+        System.out.println("|                                             |");
+        System.out.println("| Jogador(a) Nº2, digite seu nickname abaixo: |");
+        System.out.println("|.............................................|\n");
         String nomeJogador2 = scan.nextLine();
         while (nomeJogador2.trim().isEmpty()) {
             System.out.println("Nome em branco. Digite algo: \n");
@@ -102,7 +102,7 @@ public class Jogo {
             reiniciarRodada();
         }
         System.out.println("..........Vez do jogador(a) " + jogador1.getNome() + "..........");
-        jogador1.Decidir(baralho, descarte);
+        jogador1.Escolher(baralho, descarte);
 
         if (jogador1.getMao().calcularValor() > 21) {
             System.out.println(jogador1.getNome() + " ultrapassou 21. Vitoria de " + jogador2.getNome() + ".");
@@ -113,7 +113,7 @@ public class Jogo {
         }
         System.out.println("..........Vez do jogador(a) " + jogador2.getNome() + "..........");
         jogador2.mostrarMao();
-        jogador2.Decidir(baralho, descarte);
+        jogador2.Escolher(baralho, descarte);
 
         if (jogador2.getMao().calcularValor() > 21) {
             System.out.println(jogador2.getNome() + "ultrapassou 21. Vitoria de " + jogador1.getNome() + ".");

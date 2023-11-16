@@ -38,7 +38,7 @@ public class Baralho {
 
     // pegar a primeira carta do baralho
     public Carta pegarCarta() {
-        Carta cartaEscolhida = Carta.novaCarta(baralho.get(0));
+        Carta cartaEscolhida = baralho.get(0);
         baralho.remove(0);
         return cartaEscolhida;
     }
