@@ -8,13 +8,7 @@ public class Carta {
         this.tipo = tipo;
         this.valor = valor;
     }
-
-    // criar uma carta a partir de uma carta existente
-    private Carta(Carta carta) {
-        this.tipo = carta.getTipo();
-        this.valor = carta.getValor();
-    }
-
+   
     // factory method
     public static Carta criarCarta(Tipo tipo, Valor valor) {
         return new Carta(tipo, valor);
